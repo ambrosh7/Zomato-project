@@ -1,0 +1,13 @@
+# Vercel only hosts the static UI. Railway runs the API.
+requirements.txt
+requirements-dev.txt
+.python-version
+railway.toml
+src/
+tests/
+scripts/
+data/
+docs/
+.venv/
+.cache/
+stitch_bangalore_food_tech_recommender_ui/

@@ -146,10 +146,11 @@ Expect `/health` to reach `ready`, `/api/meta` to list Bangalore neighborhoods, 
 1. New project → import the same GitHub repo.
 2. Framework preset: Other.
 3. Root directory: `web`.
-4. Build command: empty. Output directory: empty (the root directory is already the static site). Install command: empty. There is no `package.json`.
-5. No environment variables. The Groq key must not be added here. Fonts load from Google Fonts in the browser.
-6. Deploy. The first deploy can go out before `vercel.json` exists; the page will load and then fail its catalog poll until the rewrite is in place.
-7. Commit `web/vercel.json` with the real Railway host and redeploy.
+4. In Root Directory settings, turn **off** “Include files outside the root directory in the Build Step”. If that stays on, Vercel still sees root `requirements.txt` and tries to build FastAPI.
+5. Build command: empty. Output directory: empty (the root directory is already the static site). Install command: empty. There is no `package.json`.
+6. No environment variables. The Groq key must not be added here. Fonts load from Google Fonts in the browser.
+7. Deploy from the latest `main` commit. Do not redeploy an older failed Production deployment once a newer one exists.
+8. Commit `web/vercel.json` with the real Railway host and redeploy.
 
 Production URL is `https://<project>.vercel.app`. That is the URL to share. The Railway URL still serves `web/` as static files because `create_app` mounts `web/` at `/`. Treat that as a same-origin fallback, not the public UI.
 
