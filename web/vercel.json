@@ -1,4 +1,14 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "rewrites": [
+    {
+      "source": "/health",
+      "destination": "https://zomato-project-production-53d7.up.railway.app/health"
+    },
+    {
+      "source": "/api/:path*",
+      "destination": "https://zomato-project-production-53d7.up.railway.app/api/:path*"
+    }
+  ]
 }
