@@ -1,0 +1,10 @@
+.env
+**/.env
+.DS_Store
+__pycache__/
+*.py[cod]
+.cache/
+data/zomato.csv
+data/catalog.csv
+data/groq-usage.json
+.venv/

@@ -1,0 +1,5 @@
+# Requires Python >= 3.11
+# Railway installs this file. Local ingest and dataset scripts use requirements-dev.txt.
+python-dotenv>=1,<2
+fastapi>=0.111,<1
+uvicorn>=0.30,<1
